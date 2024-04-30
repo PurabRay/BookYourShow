@@ -6,5 +6,4 @@ public class Costumer {
     private List<Booking> bookings;
     private String email;
 
-
 }

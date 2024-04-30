@@ -1,7 +1,11 @@
 package com.lost.bookyourshow.models;
 
 public class Booking {
-    private String id;
+    private Long id;
 
-    private String
+    private Long CustomerId;
+    private Long movieId;
+    private Long cinemaId;
+    List<List<Seat>> seats;
+
 }
