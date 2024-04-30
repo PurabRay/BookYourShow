@@ -1,20 +1,31 @@
 package com.lost.bookyourshow.models;
 
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import java.util.Date;
+import java.util.List;
+
+@AllArgsConstructor
+@Getter
+@Setter
+@Entity
+@NoArgsConstructor
 public class Movie {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
+    private String director;
+    private Date releaseDate;
     private Double price;
     private Integer duration;
-
+    @ManyToMany
+    private List<CinemaHall> cinemaHalls;
     Genre genre;
-
-    public Movie(Long id, String name, Double price, Integer duration, Genre genre) {
-        this.id = id;
-        this.name = name;
-        this.price = price;
-        this.duration = duration;
-        this.genre = genre;
-    }
 
 }
 

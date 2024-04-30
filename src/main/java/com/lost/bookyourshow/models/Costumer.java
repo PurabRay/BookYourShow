@@ -1,9 +1,24 @@
 package com.lost.bookyourshow.models;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import java.util.List;
+
+@AllArgsConstructor
+@Getter
+@Setter
+@Entity
+@NoArgsConstructor
 public class Costumer {
-    private  String id;
+    @Id
+    private Long id;
     private String name;
-    private List<Booking> bookings;
     private String email;
+
 
 }
