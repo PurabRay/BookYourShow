@@ -7,14 +7,12 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.List;
-
 @AllArgsConstructor
 @Getter
 @Setter
 @Entity
 @NoArgsConstructor
-public class Costumer {
+public class Customer {
     @Id
     private Long id;
     private String name;

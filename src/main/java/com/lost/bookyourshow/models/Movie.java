@@ -15,17 +15,23 @@ import java.util.List;
 @Entity
 @NoArgsConstructor
 public class Movie {
+
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private Long id;
     private String name;
     private String director;
     private Date releaseDate;
     private Double price;
     private Integer duration;
+
+
     @ManyToMany
     private List<CinemaHall> cinemaHalls;
     Genre genre;
+
 
 }
 
